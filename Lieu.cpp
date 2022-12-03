@@ -1,4 +1,7 @@
 #include "Lieu.h"
+
+using namespace std;
+
 void Lieu::setX(double position_x)
 {
     this->position_x = position_x;
@@ -19,18 +22,18 @@ void Lieu::setVoiture(bool voiture)
     this->voiture = voiture;
 }
 
-void Lieu::setVoiture(bool velo)
+void Lieu::setVelo(bool velo)
 {
     this->velo = velo;
 }
 
-void Lieu::setVoiture(bool metro)
+void Lieu::setMetro(bool metro)
 {
     this->metro = metro;
 }
 
 
-void Lieu::setVoiture(bool pieds)
+void Lieu::setPieds(bool pieds)
 {
     this->pieds = pieds;
 }
@@ -45,7 +48,7 @@ double Lieu::getY() const
     return this->y;
 } 
 
-double Lieu::distance(const Point &LieuBis) const // à réflechir pour le calcul de la distance par métro
+double Lieu::distance(const Lieu &LieuBis) const // à réflechir pour le calcul de la distance par métro
 {
     double dx = this->position_x - Lieubis.position_x;
     double dy = this->position_y - Lieubis.position_x;
@@ -59,7 +62,7 @@ void Lieu::saisir()
     cout << "Tapez l'ordonnée : ";  cin >> this->position_y;
 } 
 
-void Point::afficher() const
+void Lieu::afficher() const
 {
     cout << "L'abscisse vaut " << this->position_x << endl;
     cout << "L'ordonnée vaut " << this->position_y << endl;

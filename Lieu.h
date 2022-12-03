@@ -1,8 +1,13 @@
+#include <string>
+
+using namespace std;
+
+
 class Lieu {
-    char nom;
+    string nom;
     double position_x;
     double position_y;
-    double Altitude;
+    double altitude;
     bool voiture;
     bool velo;
     bool metro;
@@ -11,11 +16,16 @@ class Lieu {
 public:
     // Constructeurs
   Lieu();
-  Lieu(char nom, double position_x, double position_y, double Altitude, bool voiture, bool velo, bool metro, bool pieds);
+  Lieu(string nom, double position_x, double position_y, double altitude, bool voiture, bool velo, bool metro, bool pieds);
 
   //Accesseurs et mutateurs
   void setX(double position_x);
   void setY(double position_y);
+  void setAltitude(double altitude);
+  void setVoiture(bool voiture);
+  void setVelo(bool velo);
+  void setMetro(bool metro);
+  void setPieds(bool pieds);
   double getX() const;
   double getY() const;
     
