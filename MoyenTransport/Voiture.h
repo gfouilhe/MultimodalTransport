@@ -6,7 +6,7 @@ class Voiture : public MoyenTransport {
     Utilisateur proprietaire;
 
 public:
-
-    Voiture(Utilisateur *user, string nom, float vitesse);
+    Voiture();
+    Voiture(Utilisateur &user, string nom, float vitesse);
     
 } ;
