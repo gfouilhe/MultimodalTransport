@@ -18,3 +18,7 @@ MoyenTransport::~MoyenTransport() {}
 float MoyenTransport::getVitesse(){
     return this->vitesse;
 }
+
+string MoyenTransport::getNom(){
+    return this->nom;
+}

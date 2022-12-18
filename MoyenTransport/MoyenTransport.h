@@ -15,5 +15,6 @@ public:
     virtual ostream& operator<<(ostream& os); // affichage
     ~MoyenTransport();
     float getVitesse();
+    string getNom();
     
 } ;

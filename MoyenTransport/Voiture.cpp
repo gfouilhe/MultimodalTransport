@@ -8,3 +8,7 @@ Voiture::Voiture(Utilisateur &user, string nom, float vitesse):MoyenTransport(no
 Voiture::Voiture():MoyenTransport(nom,vitesse){
     this->proprietaire = Utilisateur();
 }
+
+Utilisateur Voiture::getProprietaire() {
+    return this->proprietaire;
+}

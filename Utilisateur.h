@@ -13,4 +13,10 @@ public:
     void ajouterVoiture(Voiture &v);
     void nePeutPlusMarcher();
 
+    string getNom();
+    Voiture getVoiture();
+    bool getPossedeVoiture();
+    bool getPossedeAbonnementMetro();
+    bool getpeutMarcher();
+
 } ;

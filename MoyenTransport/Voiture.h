@@ -8,5 +8,6 @@ class Voiture : public MoyenTransport {
 public:
     Voiture();
     Voiture(Utilisateur &user, string nom, float vitesse);
+    Utilisateur getProprietaire();
     
 } ;

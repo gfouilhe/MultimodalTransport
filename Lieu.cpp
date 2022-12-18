@@ -1,4 +1,6 @@
 #include "Lieu.h"
+#include <math.h>
+#include <iostream>
 
 using namespace std;
 
@@ -14,7 +16,7 @@ void Lieu::setY(double position_y)
 
 void Lieu::setAltitude(double Altitude)
 {
-    this->Altitude = Altitude;
+    this->altitude = Altitude;
 }
 
 void Lieu::setVoiture(bool voiture)
@@ -40,31 +42,31 @@ void Lieu::setPieds(bool pieds)
 
 double Lieu::getX() const
 {
-    return this->x;
+    return this->position_x;
 } 
 
 double Lieu::getY() const
 {
-    return this->y;
+    return this->position_y;
 } 
 
 double Lieu::distance(const Lieu &LieuBis) const // à réflechir pour le calcul de la distance par métro
 {
-    double dx = this->position_x - Lieubis.position_x;
-    double dy = this->position_y - Lieubis.position_x;
+    double dx = this->position_x - LieuBis.position_x;
+    double dy = this->position_y - LieuBis.position_x;
     return sqrt(dx*dx + dy*dy); 
 }
 
 
 void Lieu::saisir()
 {
-    cout << "Tapez l'abscisse : ";  cin >> this->position_x;
-    cout << "Tapez l'ordonnée : ";  cin >> this->position_y;
+    cout << "Tapez l'abscisse : ";  cin >> this->position_x; cout << endl;
+    cout << "Tapez l'ordonnée : ";  cin >> this->position_y; cout << endl;
 } 
 
 void Lieu::afficher() const
 {
-    cout << "L'abscisse vaut " << this->position_x << endl;
+    cout << "L'abscisse vaut " << this->position_x << endl; 
     cout << "L'ordonnée vaut " << this->position_y << endl;
 }
 

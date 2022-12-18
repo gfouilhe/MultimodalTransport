@@ -28,3 +28,23 @@ void Utilisateur::ajouterVoiture(Voiture &v) {
 void Utilisateur::nePeutPlusMarcher() {
     this->peutMarcher = false;
 }
+
+string Utilisateur::getNom() {
+    return this->nom;
+}
+
+Voiture Utilisateur::getVoiture() {
+    return this->voiture;
+}
+
+bool Utilisateur::getPossedeVoiture() {
+    return this->possedeVoiture;
+}
+
+bool Utilisateur::getPossedeAbonnementMetro() {
+    return this->possedeAbonnementMetro;
+}
+
+bool Utilisateur::getpeutMarcher() {
+    return this->peutMarcher;
+}
