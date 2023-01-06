@@ -9,7 +9,7 @@ class Metro : public MoyenTransport {
 
 public:
 
-    Metro(int max); // Initialisation d'une ligne vide de taille <= max
+    Metro(string nom, int max, double vitesse); // Initialisation d'une ligne vide de taille <= max
     ~Metro(); // Destructeur
     ostream& operator<<(ostream& os); // fonction dérivée de la fonction virtuelle définie dans MoyenTransport
     void ajouterStation(Lieu station);
