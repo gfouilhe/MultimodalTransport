@@ -8,12 +8,11 @@ protected:
     string nom;
     float vitesse; // coefficient de multiplication de la distance d'un déplacement
     // gestion des zones interdites
-
     
 public:
     MoyenTransport(string nom, float vitesse);
     virtual ostream& operator<<(ostream& os); // affichage
-    ~MoyenTransport();
+    // ~MoyenTransport(); pas de destructeur pas défault car inutile
     float getVitesse();
     string getNom();
     

@@ -13,7 +13,7 @@ ostream& MoyenTransport::operator<<(ostream& os) {
     cout << "Vitesse :" << this->vitesse << endl;
 }
 
-MoyenTransport::~MoyenTransport() {}
+// MoyenTransport::~MoyenTransport() {} pas de destructeur pas défault car inutile
 
 float MoyenTransport::getVitesse(){
     return this->vitesse;
