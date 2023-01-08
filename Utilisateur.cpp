@@ -10,8 +10,6 @@ Utilisateur::Utilisateur(string nom, bool possedeAbonnementMetro){
     this->possedeAbonnementMetro = possedeAbonnementMetro;
     this->possedeVoiture = false;
     this->possedeVelo = false;
-    this->voiture = Voiture();
-    this->velo = Velo();
 }
 
 Utilisateur::Utilisateur(){
@@ -20,8 +18,6 @@ Utilisateur::Utilisateur(){
     this->possedeAbonnementMetro = true;
     this->possedeVoiture = true;
     this->possedeVelo = false;
-    this->voiture = Voiture();
-    this->velo = Velo();
 
 }
 void Utilisateur::ajouterVoiture(Voiture &v) {
