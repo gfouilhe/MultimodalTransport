@@ -2,7 +2,9 @@ class Utilisateur {
 
     string nom;
     Voiture voiture;
+    Velo velo;
     bool possedeVoiture;
+    bool possedeVelo;
     bool possedeAbonnementMetro;
     bool peutMarcher;
 
@@ -11,11 +13,14 @@ public:
     Utilisateur();
     Utilisateur(string nom, bool possedeAbonnementMetro);
     void ajouterVoiture(Voiture &v);
+    void ajouterVelo(Velo &v);
     void nePeutPlusMarcher();
 
     string getNom();
     Voiture getVoiture();
+    Velo getVelo();
     bool getPossedeVoiture();
+    bool getPossedeVelo();
     bool getPossedeAbonnementMetro();
     bool getpeutMarcher();
 

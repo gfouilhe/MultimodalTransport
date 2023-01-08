@@ -1,5 +1,6 @@
 #include "Utilisateur.h"
 #include "Voiture.h"
+#include "Velo.h"
 #include <typeinfo>
 
 
@@ -8,8 +9,9 @@ Utilisateur::Utilisateur(string nom, bool possedeAbonnementMetro){
     this->peutMarcher = true;
     this->possedeAbonnementMetro = possedeAbonnementMetro;
     this->possedeVoiture = false;
+    this->possedeVelo = false;
     this->voiture = Voiture();
-
+    this->velo = Velo();
 }
 
 Utilisateur::Utilisateur(){
@@ -17,12 +19,19 @@ Utilisateur::Utilisateur(){
     this->peutMarcher = true;
     this->possedeAbonnementMetro = true;
     this->possedeVoiture = true;
+    this->possedeVelo = false;
     this->voiture = Voiture();
+    this->velo = Velo();
 
 }
 void Utilisateur::ajouterVoiture(Voiture &v) {
     this->possedeVoiture = true;
     this->voiture = v;
+}
+
+void Utilisateur::ajouterVelo(Velo &v) {
+    this->possedeVelo = true;
+    this->velo = v;
 }
 
 void Utilisateur::nePeutPlusMarcher() {
@@ -37,8 +46,16 @@ Voiture Utilisateur::getVoiture() {
     return this->voiture;
 }
 
+Velo Utilisateur::getVelo() {
+    return this->velo;
+}
+
 bool Utilisateur::getPossedeVoiture() {
     return this->possedeVoiture;
+}
+
+bool Utilisateur::getPossedeVelo() {
+    return this->possedeVelo;
 }
 
 bool Utilisateur::getPossedeAbonnementMetro() {
