@@ -6,12 +6,12 @@ class MoyenTransport {
 
 protected:
     string nom;
-    float vitesse; // coefficient de multiplication de la distance d'un déplacement
+    float vitesse; // coefficient de multiplication de la distance d'un deplacement
     virtual void afficher() const;
     
 public:
     MoyenTransport(string nom, float vitesse);
-    friend ostream& operator<<(ostream& os, const MoyenTransport& mt);
+    friend ostream& operator<<(ostream& os, const MoyenTransport& m);
     float getVitesse();
     string getNom();
     

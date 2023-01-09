@@ -70,7 +70,7 @@ double Lieu::getY() const{
     return this->position_y;
 } 
 
-double Lieu::distance(const Lieu &LieuBis) const {// à réflechir pour le calcul de la distance par métro
+double Lieu::distance(const Lieu &LieuBis) const {// à reflechir pour le calcul de la distance par metro
     double dx = this->position_x - LieuBis.position_x;
     double dy = this->position_y - LieuBis.position_x;
     return sqrt(dx*dx + dy*dy); 
@@ -78,17 +78,17 @@ double Lieu::distance(const Lieu &LieuBis) const {// à réflechir pour le calcu
 
 void Lieu::saisir(){
     cout << "Tapez l'abscisse : ";  cin >> this->position_x; cout << endl;
-    cout << "Tapez l'ordonnée : ";  cin >> this->position_y; cout << endl;
+    cout << "Tapez l'ordonnee : ";  cin >> this->position_y; cout << endl;
 } 
 
 void Lieu::afficher() const{
     cout << "=====================================" << endl;
     cout << "Le lieu : " << this->nom << "est accessible avec les moyens de transports suivants :" << endl ;
     if (this->metro) {
-        cout << "Métro" << endl;
+        cout << "Metro" << endl;
     }
     if (this->velo) {
-        cout << "Vélo" << endl;
+        cout << "Velo" << endl;
     }
     if (this->pieds) {
         cout << "A pied" << endl;
@@ -97,7 +97,7 @@ void Lieu::afficher() const{
         cout << "Voiture" << endl;
     }
     cout << "L'abscisse vaut " << this->position_x << endl; 
-    cout << "L'ordonnée vaut " << this->position_y << endl;
+    cout << "L'ordonnee vaut " << this->position_y << endl;
     cout << "=====================================" << endl;
 }
 

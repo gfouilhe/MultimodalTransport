@@ -1,7 +1,4 @@
 #include "Utilisateur.h"
-#include "Voiture.h"
-#include "Velo.h"
-#include <typeinfo>
 #include <iostream>
 
 using namespace std;
@@ -72,10 +69,10 @@ void Utilisateur::afficher() const {
         cout << "- Marcher" << endl;
     }
     if (possedeVelo) {
-        cout << "- Vélo" << endl;
+        cout << "- Velo" << endl;
     }
     if (possedeAbonnementMetro) {
-        cout << "- Métro" << endl;
+        cout << "- Metro" << endl;
     }
     if (possedeVoiture) {
         cout << "- Voiture" << endl;

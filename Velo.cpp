@@ -1,5 +1,5 @@
 #include "Velo.h"
 
-Velo::Velo():MoyenTransport("Vélo",1.0) {}
+Velo::Velo():MoyenTransport("Velo",1.0) {}
 
-Velo::Velo(double vitesse):MoyenTransport("Vélo",vitesse) {}
+Velo::Velo(double vitesse):MoyenTransport("Velo",vitesse) {}
