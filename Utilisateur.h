@@ -23,5 +23,12 @@ public:
     bool getPossedeVelo();
     bool getPossedeAbonnementMetro();
     bool getpeutMarcher();
+    void afficher() const;
+    friend ostream& operator<<(ostream& os, const Utilisateur& u);
 
 } ;
+
+inline ostream& operator<<(ostream& os, const Utilisateur& u) {
+    u.afficher();
+    return os;
+}

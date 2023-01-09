@@ -2,7 +2,9 @@
 #include "Voiture.h"
 #include "Velo.h"
 #include <typeinfo>
+#include <iostream>
 
+using namespace std;
 
 Utilisateur::Utilisateur(string nom, bool possedeAbonnementMetro){
     this->nom = nom;
@@ -60,4 +62,23 @@ bool Utilisateur::getPossedeAbonnementMetro() {
 
 bool Utilisateur::getpeutMarcher() {
     return this->peutMarcher;
+}
+
+void Utilisateur::afficher() const {
+    cout << "=====================================" << endl;
+    cout << "Nom de l'utilisateur :" << nom << endl;
+    cout << "Moyens de transports disponibles : " << endl;
+    if (peutMarcher) {
+        cout << "- Marcher" << endl;
+    }
+    if (possedeVelo) {
+        cout << "- Vélo" << endl;
+    }
+    if (possedeAbonnementMetro) {
+        cout << "- Métro" << endl;
+    }
+    if (possedeVoiture) {
+        cout << "- Voiture" << endl;
+    }
+    cout << "=====================================" << endl;
 }

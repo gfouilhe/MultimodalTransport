@@ -7,13 +7,17 @@ class MoyenTransport {
 protected:
     string nom;
     float vitesse; // coefficient de multiplication de la distance d'un déplacement
-    // gestion des zones interdites
+    virtual void afficher() const;
     
 public:
     MoyenTransport(string nom, float vitesse);
-    virtual ostream& operator<<(ostream& os); // affichage
-    // ~MoyenTransport(); pas de destructeur pas défault car inutile
+    friend ostream& operator<<(ostream& os, const MoyenTransport& mt);
     float getVitesse();
     string getNom();
     
 } ;
+
+inline ostream& operator<<(ostream& os, const MoyenTransport& m) {
+    m.afficher();
+    return os;
+}

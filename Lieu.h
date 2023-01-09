@@ -36,4 +36,11 @@ public:
   
   void saisir();
   void afficher() const;
+  friend ostream& operator<<(ostream& os, const Lieu& l);
+  bool operator==(const Lieu& l); 
 } ;
+
+inline ostream& operator<<(ostream& os, const Lieu& l) {
+    l.afficher();
+    return os;
+}

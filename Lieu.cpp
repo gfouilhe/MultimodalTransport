@@ -82,6 +82,7 @@ void Lieu::saisir(){
 } 
 
 void Lieu::afficher() const{
+    cout << "=====================================" << endl;
     cout << "Le lieu : " << this->nom << "est accessible avec les moyens de transports suivants :" << endl ;
     if (this->metro) {
         cout << "Métro" << endl;
@@ -97,5 +98,9 @@ void Lieu::afficher() const{
     }
     cout << "L'abscisse vaut " << this->position_x << endl; 
     cout << "L'ordonnée vaut " << this->position_y << endl;
+    cout << "=====================================" << endl;
 }
 
+bool Lieu::operator==(const Lieu& l) {
+    return this->nom == l.nom && this->position_x == l.position_x && this->position_y == l.position_y;
+}

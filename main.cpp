@@ -19,6 +19,7 @@ Lieu colline("Colline",-10,0,0,true,false,false,true);
 Lieu zoneIndus("Zone Industrielle",10,10,0,true,false,false,false);
 Lieu centre("Centre Ville",0,0,0,false,false,true,true);
 
+
 // Creation du métro
 Metro metro("Ligne 1",5,5);
 metro.ajouterStation(univ);
@@ -33,9 +34,7 @@ Utilisateur user("Nicolas",true);
 Velo velo(2.0);
 user.ajouterVelo(velo);
 
-Marcher marche;
-
-
+cout << user << endl;
 };
 
 
