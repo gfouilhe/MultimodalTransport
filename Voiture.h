@@ -1,4 +1,7 @@
+#pragma once
 #include "MoyenTransport.h"
+#include <iostream>
+using namespace std;
 class Voiture : public MoyenTransport {
 
 public:

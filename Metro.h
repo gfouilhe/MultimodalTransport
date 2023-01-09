@@ -1,3 +1,4 @@
+#pragma once
 #include "MoyenTransport.h"
 #include "Lieu.h"
 

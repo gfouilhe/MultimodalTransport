@@ -1,10 +1,11 @@
+#pragma once
 #include "Voiture.h"
-#include "Velo.h"
+// #include "Velo.h"
 class Utilisateur {
 
     string nom;
     Voiture voiture;
-    Velo velo;
+    // Velo velo;
     bool possedeVoiture;
     bool possedeVelo;
     bool possedeAbonnementMetro;
@@ -15,12 +16,12 @@ public:
     Utilisateur();
     Utilisateur(string nom, bool possedeAbonnementMetro);
     void ajouterVoiture(Voiture &v);
-    void ajouterVelo(Velo &v);
+    // void ajouterVelo(Velo &v);
     void nePeutPlusMarcher();
 
     string getNom();
     Voiture getVoiture();
-    Velo getVelo();
+    // Velo getVelo();
     bool getPossedeVoiture();
     bool getPossedeVelo();
     bool getPossedeAbonnementMetro();

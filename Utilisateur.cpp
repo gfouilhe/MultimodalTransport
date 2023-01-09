@@ -24,10 +24,10 @@ void Utilisateur::ajouterVoiture(Voiture &v) {
     this->voiture = v;
 }
 
-void Utilisateur::ajouterVelo(Velo &v) {
-    this->possedeVelo = true;
-    this->velo = v;
-}
+// void Utilisateur::ajouterVelo(Velo &v) {
+//     this->possedeVelo = true;
+//     this->velo = v;
+// }
 
 void Utilisateur::nePeutPlusMarcher() {
     this->peutMarcher = false;
@@ -41,9 +41,9 @@ Voiture Utilisateur::getVoiture() {
     return this->voiture;
 }
 
-Velo Utilisateur::getVelo() {
-    return this->velo;
-}
+// Velo Utilisateur::getVelo() {
+//     return this->velo;
+// }
 
 bool Utilisateur::getPossedeVoiture() {
     return this->possedeVoiture;

@@ -1,10 +1,10 @@
 #include "Lieu.h"
+#include "Utilisateur.h"
+#include "Voiture.h"
 #include "MoyenTransport.h"
 #include "Marcher.h"
 #include "Metro.h"
 #include "Velo.h"
-#include "Voiture.h"
-#include "Utilisateur.h"
 #include <iostream>
 
 using namespace std;
@@ -32,7 +32,7 @@ cout << metro << endl;
 Utilisateur user("Nicolas",true);
 
 Velo velo(2.0);
-user.ajouterVelo(velo);
+// user.ajouterVelo(velo);
 
 cout << user << endl;
 };

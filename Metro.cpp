@@ -20,7 +20,7 @@ Metro::~Metro() {
 void Metro::afficher() const {
     
     cout << "=====================================" << endl;
-    cout << "Ligne de metro " << nom << " avec une vitesse de " << vitesse << " km/h, comportant " << nbStations << " stations :" << endl;
+    cout << "Ligne de metro " << nom << " avec une vitesse de " << vitesse << " km/h, comportant " << nbStations << " stations : " << endl;
     for (int i = 0; i < nbStations; i++) {
         cout << tab[i] << endl;
     }
