@@ -1,6 +1,3 @@
-#include "MoyenTransport.h"
-#include "Lieu.h"
-
 class Metro : public MoyenTransport {
 
     Lieu * tab; // Tableau dynamique des stations
