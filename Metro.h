@@ -9,7 +9,7 @@ class Metro : public MoyenTransport {
     int nbStations;
 
 public:
-
+    Metro();
     Metro(string nom, int max, double vitesse); // Initialisation d'une ligne vide de taille <= max
     ~Metro(); // Destructeur
     virtual void afficher() const;
@@ -19,5 +19,6 @@ public:
     bool appartientStation(Lieu station);
     int indexStation(Lieu station);
     Lieu stationIndex(int index);
+    double distance(Lieu &dep, Lieu &dest);
     
 } ;

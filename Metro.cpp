@@ -11,6 +11,12 @@ Metro::Metro(string nom, int max, double vitesse) : MoyenTransport(nom, vitesse)
   tab = new Lieu[nbMaxStations];
 }
 
+Metro::Metro() : MoyenTransport("default metro", 5.0) {
+  this->nbMaxStations = 5;
+  this->nbStations = 0;
+  tab = new Lieu[nbMaxStations];
+}
+
 // Destructeur
 Metro::~Metro() {
   delete[] this->tab;
@@ -19,12 +25,12 @@ Metro::~Metro() {
 // Surcharge de afficher
 void Metro::afficher() const {
     
-    cout << "=====================================" << endl;
-    cout << "Ligne de metro " << nom << " avec une vitesse de " << vitesse << " km/h, comportant " << nbStations << " stations : " << endl;
+    cout << "Ligne de metro " << nom << endl;
+    cout << " Vitesse : " << vitesse << " km/h, Nombre de Stations : " << nbStations << endl;
     for (int i = 0; i < nbStations; i++) {
         cout << tab[i] << endl;
     }
-    cout << "=====================================" << endl;
+    cout << endl;
 }
 
 // Ajout d'une station à la fin de la ligne
@@ -82,10 +88,9 @@ int Metro::indexStation(Lieu station) {
             if (tab[i] == station) {return i;}
         }
     }
-    else {
-        cout << "La station specifiee n'appartient pas à cette ligne de metro." << endl;
-        return -1;
-    }
+    
+    cout << "La station specifiee n'appartient pas à cette ligne de metro." << endl;
+    return -1;
 }
 
 Lieu Metro::stationIndex(int index){
@@ -96,4 +101,21 @@ Lieu Metro::stationIndex(int index){
         cout << "L'index depasse le nombre de station." << endl;
         return tab[0];
     }
+}
+
+
+double Metro::distance(Lieu &dep, Lieu &dest){
+  if (! (appartientStation(dep) && appartientStation(dest))) {
+    cout << "L'une des deux stations n'appartiennent pas à la ligne de métro" << endl;
+    return 999999.0;
+  }
+  int idxstart;
+  int idxend;
+  idxstart = indexStation(dep);
+  idxend = indexStation(dest);
+  double dist = 0.0;
+  for (int i = idxstart; i < idxend; i++) {
+    dist += tab[i].distance(tab[i+1]);
+  }
+  return dist;
 }

@@ -31,7 +31,10 @@ public:
   string getNom() const;
   double getX() const;
   double getY() const;
-    
+  bool getVoiture();
+  bool getVelo();
+  bool getMetro();
+  bool getPieds();
   //Autre fonction
   double distance(const Lieu &Lieubis) const;
   

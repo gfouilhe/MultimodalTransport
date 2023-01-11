@@ -2,4 +2,4 @@
 
 Velo::Velo():MoyenTransport("Velo",1.0) {}
 
-Velo::Velo(double vitesse):MoyenTransport("Velo",vitesse) {}
+Velo::Velo(string nom, double vitesse):MoyenTransport(nom,vitesse) {}

@@ -82,25 +82,31 @@ void Lieu::saisir(){
 } 
 
 void Lieu::afficher() const{
-    cout << "=====================================" << endl;
-    cout << "Le lieu : " << this->nom << " est accessible avec les moyens de transports suivants : " << endl ;
+    cout << this->nom << "  accessible avec les moyens de transports : " << endl ;
     if (this->metro) {
-        cout << "Metro" << endl;
+        cout << "  Metro  " ;
     }
     if (this->velo) {
-        cout << "Velo" << endl;
+        cout << "  Velo  " ;
     }
     if (this->pieds) {
-        cout << "A pied" << endl;
+        cout << "  A pied  ";
     }
     if (this->voiture) {
-        cout << "Voiture" << endl;
+        cout << "  Voiture  ";
     }
-    cout << "L'abscisse vaut " << this->position_x << endl; 
-    cout << "L'ordonnee vaut " << this->position_y << endl;
-    cout << "=====================================" << endl;
+    cout << endl;
+    cout << "  X =  " << this->position_x ; 
+    cout << "  Y = " << this->position_y ;
+    cout << endl;
 }
 
 bool Lieu::operator==(const Lieu& l) {
     return this->nom == l.nom && this->position_x == l.position_x && this->position_y == l.position_y;
 }
+
+
+bool Lieu::getVoiture(){return this->voiture;}
+bool Lieu::getVelo(){return this->velo;}
+bool Lieu::getMetro(){return this->metro;}
+bool Lieu::getPieds(){return this->pieds;}
