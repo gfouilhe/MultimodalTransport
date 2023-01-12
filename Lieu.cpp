@@ -70,7 +70,7 @@ double Lieu::getY() const{
     return this->position_y;
 } 
 
-double Lieu::distance(const Lieu &LieuBis) const {// à reflechir pour le calcul de la distance par metro
+double Lieu::distance(const Lieu &LieuBis) const {
     double dx = this->position_x - LieuBis.position_x;
     double dy = this->position_y - LieuBis.position_x;
     return sqrt(dx*dx + dy*dy); 
