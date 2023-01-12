@@ -2,4 +2,4 @@
 
 Voiture::Voiture(string nom, double vitesse):MoyenTransport(nom,vitesse) {}
 
-Voiture::Voiture():MoyenTransport("Voiture",1.0){}
+Voiture::Voiture():MoyenTransport("Voiture",3.0){}

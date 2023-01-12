@@ -82,7 +82,8 @@ void Lieu::saisir(){
 } 
 
 void Lieu::afficher() const{
-    cout << this->nom << "  accessible avec les moyens de transports : " << endl ;
+    cout << endl;
+    cout << this->nom << "  accessible en : " << endl ;
     if (this->metro) {
         cout << "  Metro  " ;
     }
