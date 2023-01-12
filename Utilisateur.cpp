@@ -143,7 +143,7 @@ double Utilisateur::calculTransport(Lieu &dep, Lieu &dest, char mode){
             break;
         case 'p': //pieds
             if (! (dep.getPieds() && dest.getPieds())) {
-                cout << "L'un des deux lieux n'est pas accessible à pied" << endl;
+                cout << "L'un des deux lieux n'est pas accessible a pied" << endl;
                 return 99999.0;
             }
             if (! (this->peutMarcher)) {

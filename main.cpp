@@ -78,35 +78,47 @@ double distGareUniv;
 
 distGareUniv = gare.distance(univ);
 
-
-cout << "Distance entre le lieu : " << gare.getNom() << " et le lieu : " << univ.getNom() << " = " << distGareUniv << endl;
+cout << endl << "=================" << endl << endl;
+cout << "Distance entre le lieu : " << univ.getNom() << " et le lieu : " << gare.getNom() << " = " << distGareUniv << endl << endl ;
 
 // Creation du metro
 Metro metro("Ligne 1",5,5.0);
 metro.ajouterStation(univ);
 metro.ajouterStation(centre);
 metro.ajouterStation(gare);
-cout << metro << endl;
+// cout << metro << endl;
 
 
 // Creation de l'utilisateur
 Utilisateur user("Nicolas",true);
 
-Velo velo;
-Voiture voiture;
+Velo velo; // par défault -> vitesse 2.0
+Voiture voiture; // par défault -> vitesse 3.0
 
 user.ajouterVelo(velo);
 user.ajouterVoiture(voiture);
 user.ajouterMetro(metro);
 
-double tempsmetro;
-double tempspieds;
-tempsmetro = user.calculTransport(univ,gare,'m');
-tempspieds = user.calculTransport(univ,gare,'p');
-cout << tempsmetro << endl;
-cout << tempspieds << endl;
+// Ecemple de calcul du temps de transport
+
+// double tempsmetro;
+// double tempspieds;
+// tempsmetro = user.calculTransport(univ,gare,'m');
+// tempspieds = user.calculTransport(univ,gare,'p');
+// cout << tempsmetro << endl;
+// cout << tempspieds << endl;
+
 
 Calcultotal(user,univ,gare);
+
+cout << endl << "=================" << endl << endl;
+
+Calcultotal(user,zoneIndus,colline);
+
+cout << endl << "=================" << endl << endl;
+
+Calcultotal(user,zoneIndus,gare);
+
 
 return 0;
 };

@@ -33,7 +33,7 @@ void Metro::afficher() const {
     cout << endl;
 }
 
-// Ajout d'une station à la fin de la ligne
+// Ajout d'une station a la fin de la ligne
 void Metro::ajouterStation(Lieu station) {
   if (nbStations < nbMaxStations) {
     tab[nbStations] = station;
@@ -41,18 +41,18 @@ void Metro::ajouterStation(Lieu station) {
   }
 }
 
-// Ajout d'une station à l'index specifie
+// Ajout d'une station a l'index specifie
 void Metro::ajouterStation(Lieu station, int index) {
     if (index < 0 || index > nbStations) {
         cout << "L'index specifie n'est pas valide." << endl;
     }
     else {
     if (nbStations < nbMaxStations) {
-      // Decalage des elements du tableau à partir de l'index specifie
+      // Decalage des elements du tableau a partir de l'index specifie
       for (int i = nbStations; i > index; i--) {
         tab[i] = tab[i-1];
       }
-      // Ajout de la nouvelle station à l'index specifie
+      // Ajout de la nouvelle station a l'index specifie
       tab[index] = station;
       nbStations++;
     }
@@ -63,18 +63,18 @@ void Metro::ajouterStation(Lieu station, int index) {
 void Metro::supprimerStation(Lieu station) {
   int index = indexStation(station);
   if (index != -1) {
-    // Decalage des elements du tableau à partir de l'index de la station à supprimer
+    // Decalage des elements du tableau a partir de l'index de la station a supprimer
     for (int i = index; i < nbStations-1; i++) {
       tab[i] = tab[i+1];
     }
     nbStations--;
   }
   else {
-    cout << "La station specifiee n'appartient pas à cette ligne de metro." << endl;
+    cout << "La station specifiee n'appartient pas a cette ligne de metro." << endl;
   }
 }
 
-// Verification si une station appartient à la ligne de metro
+// Verification si une station appartient a la ligne de metro
 bool Metro::appartientStation(Lieu station) {
     for (int i = 0; i < nbStations; i++) {
         if (tab[i] == station) {return true;}
@@ -89,7 +89,7 @@ int Metro::indexStation(Lieu station) {
         }
     }
     
-    cout << "La station specifiee n'appartient pas à cette ligne de metro." << endl;
+    cout << "La station specifiee n'appartient pas a cette ligne de metro." << endl;
     return -1;
 }
 
@@ -106,7 +106,7 @@ Lieu Metro::stationIndex(int index){
 
 double Metro::distance(Lieu &dep, Lieu &dest){
   if (! (appartientStation(dep) && appartientStation(dest))) {
-    cout << "L'une des deux stations n'appartiennent pas à la ligne de métro" << endl;
+    cout << "L'une des deux stations n'appartiennent pas a la ligne de métro" << endl;
     return 999999.0;
   }
   int idxstart;
