@@ -99,7 +99,7 @@ user.ajouterVelo(velo);
 user.ajouterVoiture(voiture);
 user.ajouterMetro(metro);
 
-// Ecemple de calcul du temps de transport
+// Exemple de calcul du temps de transport
 
 // double tempsmetro;
 // double tempspieds;
